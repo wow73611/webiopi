@@ -4,18 +4,18 @@
   * Installation
     * [INSTALL Setup & Use]
     * [CONFIGURATION Configuration]
+    * [DEVICES Devices supported]
     * [PASSWORD Change Password]
   * Libraries
-    * [PYTHONSERVER Server library]
+    * [PYTHONSERVER Server library (NEW)]
+    * [PYTHON Server library (OLD)]
     * [HTML]
     * [JAVASCRIPT Javascript]
     * [CSS]
-    * [DEVICES Devices supported]
     * [DIGITAL Digital package]
     * [ANALOG Analog package]
     * [SENSOR Sensor package]
     * [RESTAPI GPIO REST API]
-    * [PYTHON Old Server library]
   * Clients
     * [PYTHONCLIENT Python]
     * [JAVACLIENT Java]
