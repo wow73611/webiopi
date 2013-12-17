@@ -1,23 +1,21 @@
   * [INTRODUCTION Introduction]
   * [CHANGELOG Changelog]
   * [ROADMAP Roadmap]
-  * Install. & Config.
-    * [UPGRADE Upgrade]
-    * [INSTALL Installation]
+  * Installation
+    * [INSTALL Setup & Use]
     * [CONFIGURATION Configuration]
     * [PASSWORD Change Password]
-  * Customize
-    * [JAVASCRIPT Javascript]
+  * Libraries
+    * [PYTHONSERVER Server library]
     * [HTML]
+    * [JAVASCRIPT Javascript]
     * [CSS]
-  * Libraries & REST API
-    * [PYTHONSERVER New Server library]
-    * [PYTHON Old Server library]
     * [DEVICES Devices supported]
     * [DIGITAL Digital package]
     * [ANALOG Analog package]
     * [SENSOR Sensor package]
     * [RESTAPI GPIO REST API]
-  * Clients libraries
+    * [PYTHON Old Server library]
+  * Clients
     * [PYTHONCLIENT Python]
     * [JAVACLIENT Java]
