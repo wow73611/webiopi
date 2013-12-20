@@ -3,7 +3,7 @@
 <wiki:toc max_depth="3" />
 
 =Example=
-This example displays big buttons arranged in a column. It also changes the background color of the GPIO 7 for both low and high states. There is two buttons which call a macro and requires to use the associated  server script you'll found below. You can use the pre-installed WebIOPi service if you don't plan to use macros.
+This example displays big buttons arranged in a column. It also changes the background color of the GPIO 7 for both low and high states.
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
