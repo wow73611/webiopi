@@ -2,9 +2,9 @@
   * [CHANGELOG Changelog]
   * [ROADMAP Roadmap]
   * Installation
-    * [INSTALL Setup & Use]
+    * [INSTALL Setup]
     * [CONFIGURATION Configuration]
-    * [DEVICES Devices supported]
+    * [DEVICES Supported Devices]
     * [PASSWORD Change Password]
   * Libraries
     * [PYTHONSERVER Server library (NEW)]
