@@ -11,8 +11,7 @@
     * [Tutorial_Macros Using Macros]
     * [Tutorial_Devices Using Devices]
   * Libraries
-    * [PYTHONSERVER Python Server (NEW)]
-    * [PYTHON Python Server (OLD)]
+    * [PYTHONSERVER Python Server]
     * [JAVASCRIPT Javascript]
     * [CSS]
     * Devices
