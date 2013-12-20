@@ -6,16 +6,20 @@
     * [CONFIGURATION Configuration]
     * [DEVICES Supported Devices]
     * [PASSWORD Change Password]
+  * Tutorials
+    * [Tutorial_Basis Basis]
+    * [Tutorial_Macros Using Macros]
+    * [Tutorial_Devices Using Devices]
   * Libraries
-    * [PYTHONSERVER Server library (NEW)]
-    * [PYTHON Server library (OLD)]
-    * [HTML]
+    * [PYTHONSERVER Python Server (NEW)]
+    * [PYTHON Python Server (OLD)]
     * [JAVASCRIPT Javascript]
     * [CSS]
-    * [DIGITAL Digital package]
-    * [ANALOG Analog package]
-    * [SENSOR Sensor package]
-    * [RESTAPI GPIO REST API]
+    * Devices
+      * [RESTAPI GPIO]
+      * [DIGITAL Digital]
+      * [ANALOG Analog]
+      * [SENSOR Sensors]
   * Clients
     * [PYTHONCLIENT Python]
     * [JAVACLIENT Java]
