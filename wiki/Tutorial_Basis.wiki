@@ -1,0 +1,24 @@
+=Introduction=
+Making an IoT application using WebIOPi is very easy once we catch how it works and what is necessary.
+
+WebIOPi include an HTTP server that provide both HTML ressources and a REST API to control things. Your browser will first load a HTML file, then the included Javascript will make Asynchronous calls to the REST API to control and update the UI. This method is very efficient, because it don't need to refresh and download the whole page.
+
+  * You can build your HTML / Web UI from scratch, using the WebIOPi JS library or not.
+  * You can extend the WebIOPi behavior by loading custom Python script
+
+Assume we simply want a button to control a light, which will be automatically turned on and off. I say a light, but it can be a anything you want. The customization process has 3 steps :
+  # Write a simple Python script to initialize the GPIO and handle auto on/off
+  # Write a simple HTML/Javascript page
+  # Configure WebIOPi Server
+
+
+=Python script=
+
+
+=HTML/Javascript=
+
+
+=Configuration=
+
+
+=Running=
