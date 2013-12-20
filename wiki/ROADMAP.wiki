@@ -1,21 +1,13 @@
 This roadmap gives information about upcoming work.
 
-  * Ease DS2482 I2C 1-Wire controller use
-  * Add RPIDOM board support
-  * Add PiFace board support
-  * Add Arduino board support
-  * Complete all clients libraries
-  * Add task scheduling (issue 19)
-  * Improve software PWM (issue 42)
-  * Add GPIO interrupt handling (issue 8)
-  * Improve HTTP handling (issue 40)
-  * Add HTTPS support
-  * Add digest authentication
-  * Add data push (issue 9)
-  * Asynchronous client libraries
-  * Make debian package (issue 41)
-  * Devices configuration setup (issue 34)
-  * Advanced user management
-  * Add administration web app
-  * Improve Web UI
-  * Mobile apps
+  * DS2482 1-Wire support
+  * RPIDOM board support
+  * PiFace board support
+  * Arduino board support
+  * Task scheduling (issue 19)
+  * GPIO interrupt handling (issue 8)
+  * WebSocket support (issue 9)
+  * HTTPS support
+  * HTTP Digest Authentication
+  * User Management
+  * Administration web app
