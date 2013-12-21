@@ -11,11 +11,11 @@
     * [JAVACLIENT Java client]
   * Documentation
     * [CONFIGURATION Configuration]
-    * [DEVICES Supported Devices]
     * [PYTHONSERVER Python Server library]
     * [JAVASCRIPT Javascript library]
     * [CSS CSS naming]
     * [RESTAPI GPIO / REST API]
+    * [DEVICES Supported Devices]
     * Devices library
       * [DIGITAL Digital]
       * [ANALOG Analog]
