@@ -4,7 +4,7 @@
   * Tutorials
     * [INSTALL Installation]
     * [PASSWORD Change Password]
-    * [Tutorial_Basis Customization Basis]
+    * [Tutorial_Basis Framework Basis]
     * [Tutorial_Macros Using Macros]
     * [Tutorial_Devices Using Devices]
   * Documentation
