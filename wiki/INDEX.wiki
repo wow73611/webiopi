@@ -7,6 +7,7 @@
     * [Tutorial_Basis Framework Basis]
     * [Tutorial_Macros Using Macros]
     * [Tutorial_Devices Using Devices]
+    * [Tutorial_Tips Hacker Tips]
     * [PYTHONCLIENT Python client]
     * [JAVACLIENT Java client]
   * Documentation
