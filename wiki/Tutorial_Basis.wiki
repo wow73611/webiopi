@@ -90,7 +90,7 @@ The file is composed of few HTML tags, including a little Javascript part and fe
 		var button = webiopi().createGPIOButton(17, "Light");
 
 		// append button to HTML element with ID="content" using jQuery
-		$("#content").append(button);
+		$("#controls").append(button);
 	});
 		
 	</script>
@@ -115,7 +115,7 @@ The file is composed of few HTML tags, including a little Javascript part and fe
 	</style>
 </head>
 <body>
-	<div id="content" align="center"></div>
+	<div id="controls" align="center"></div>
 </body>
 </html>
 }}}
