@@ -1,5 +1,5 @@
 =<font color="red">(DRAFT)</font> Tutorial : Using macros=
-If we want to change the on/off hours from the UI, we can use webiopi macros. Macros are custom Pythons functions automatically binded to the REST API, so they are remotely callable. They allow to remotely trigger complex computation on the Raspberry Pi, manual events, change settings...
+If we want to change the on/off hours from the UI, we can use webiopi macros. Macros are custom Pythons functions automatically binded to the REST API, so they are remotely callable. They allow to remotely trigger complex computation on the Raspberry Pi or manual events, trigger multiple GPIO at the same time, change settings...
 
 ==Adding macro in the Python script==
 Registering macros to the WebIOPi server only requires a single Python decorator before each function.
