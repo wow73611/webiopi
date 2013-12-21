@@ -38,7 +38,7 @@ Ensure you don't have any *doc-root* directive in the *`[HTTP]`* section to use 
 Following example shows several devices displayed in the monitor.
 <p align="center">http://trouch.com/wp-content/uploads/2013/03/webiopi-0.6-devices1.png</p>
 
-==WebIOPi Python scripts : Heater example ==
+==Python scripts : Heater example ==
 When devices are named in the configuration file, drivers are automatically called to initialize the device. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported. You will find a link to all interfaces supported with a complete function list on the top of each device wiki pages. See [BMP085] and [MCP230xx] for instance.
 {{{
 import webiopi
