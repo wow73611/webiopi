@@ -22,6 +22,7 @@ def getLightHours():
 
 @webiopi.macro
 def setLightHours(on, off):
+    global HOUR_ON, HOUR_OFF
     HOUR_ON = int(on)
     HOUR_OFF = int(off)
     return getLightHours()
@@ -36,6 +37,33 @@ Using macros from Javascript is really easy. The most difficult part is to inter
 {{{
 <html>
 ...
+        webiopi().ready(function() {
+
+		var updateLightHours = function(macro, args, response) {
+                    var hours = response.split(";");
+                    $("#inputOn").val(hours[0]);
+                    $("#inputOff").val(hours[1]);
+		}
+
+                webiopi().callMacro("getLightHours", [], updateLightHours);
+		
+		var sendButton = webiopi().createButton("sendButton", "Send", function() {
+                    var hours = [$("#inputOn").val(), $("#inputOff").val()];
+                    webiopi().callMacro("setLightHours", hours, updateLightHours);
+                });
+                $("#controls").append(sendButton);
+
+                // create a "Light" labeled button for GPIO 17
+                var button = webiopi().createGPIOButton(17, "Light");
+
+                // append button to HTML element with ID="controls" using jQuery
+                $("#controls").append(button);
+
+                webiopi().refreshGPIO(true);
+
+        });
+
+...
 <body>
 Turn On at :<input type="text" id="inputOn" /><br/>
 Turn Off at: <input type="text" id="inputOff" /><br/>
@@ -43,3 +71,5 @@ Turn Off at: <input type="text" id="inputOff" /><br/>
 </body>
 </html>
 }}}
+
+<p align="center">http://trouch.com/wp-content/uploads/2013/12/webiopi_tutorial_macros.png</p>
