@@ -50,29 +50,37 @@ Turn Off at: <input type="text" id="inputOff" /><br/>
 Then update the *webiopi().ready()* call.
 {{{
         webiopi().ready(function() {
-
+		// Following function will process data received from set/getLightHours macro.
 		var updateLightHours = function(macro, args, response) {
                     var hours = response.split(";");
                     $("#inputOn").val(hours[0]);
                     $("#inputOff").val(hours[1]);
 		}
 
+		// Immediately call getLightHours macro to update the UI with current values
                 webiopi().callMacro("getLightHours", [], updateLightHours);
 		
+		// And we create a button to call setLightHours macro
 		var sendButton = webiopi().createButton("sendButton", "Send", function() {
+		   // Arguments sent to the macro
                     var hours = [$("#inputOn").val(), $("#inputOff").val()];
+		    // Call the macro
                     webiopi().callMacro("setLightHours", hours, updateLightHours);
                 });
+		// Append the button to the controls box
                 $("#controls").append(sendButton);
 
                 // create a "Light" labeled button for GPIO 17
                 var button = webiopi().createGPIOButton(17, "Light");
 
-                // append button to HTML element with ID="controls" using jQuery
+		// Append the button to the controls box
                 $("#controls").append(button);
 
                 webiopi().refreshGPIO(true);
 
         });
 }}}
+
+==Testing==
+As you updated the script file, you need to restart WebIOPi, then point your browser to it. 
 <p align="center">http://trouch.com/wp-content/uploads/2013/12/webiopi_tutorial_macros.png</p>
