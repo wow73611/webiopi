@@ -53,6 +53,9 @@ def setup():
 
 # loop function is repeatedly called by WebIOPi 
 def loop():
+    # retrieve current datetime
+    now = datetime.datetime.now()
+
     # toggle light ON all days at the correct time
     if ((now.hour == HOUR_ON) and (now.minute == 0) and (now.second == 0)):
         if (GPIO.digitalRead(LIGHT) == GPIO.LOW):
