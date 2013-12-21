@@ -24,7 +24,7 @@ Assume we have a [BMP085] I2C Temperature and Pressure sensor, simply add follow
 bmp = BMP085
 }}}
 
-Assume we also have a [MCP23008] I2C GPIO Expander, then we can also add the optional I2C slave address.
+Assume we also have a [MCP230xx MCP23008] I2C GPIO Expander, then we can also add the optional I2C slave address.
 {{{
 [DEVICES]
 bmp = BMP085
