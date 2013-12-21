@@ -94,6 +94,9 @@ The file is composed of few HTML tags, including a little Javascript part and fe
 
 		// append button to HTML element with ID="controls" using jQuery
 		$("#controls").append(button);
+
+                // auto refresh UI
+                webiopi().refreshGPIO(true);
 	});
 		
 	</script>
