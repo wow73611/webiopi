@@ -24,4 +24,4 @@ Learn on how to use SSH to remotely administrate your Pi.
 ----
 
 ==Use network shares to edit files==
-Instead of uploading files. So you can remotely edit files, like if they was on your computer. If you are on Windows, install Samba on your Pi. If your are on Mac, install Netatalk instead.
+Instead of uploading files repeatedly on your Pi, you can remotely edit files, like if they was on your computer. If you are on Windows, install Samba on your Pi. If your are on Mac, install Netatalk instead.
