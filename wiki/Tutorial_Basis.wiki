@@ -26,7 +26,7 @@ home
 }}}
 
 =Python script=
-Create a *script.py* file in you *python * folder, eg. */home/pi/myproject/python/script.py*. This file will be loaded and executed by the WebIOPi server.
+Create a *script.py* file in your *python * folder, eg. */home/pi/myproject/python/script.py*. This file will be loaded and executed by the WebIOPi server.
 
 {{{
 import webiopi
@@ -92,7 +92,7 @@ The file is composed of few HTML tags, including a little Javascript part and fe
 		// create a "Light" labeled button for GPIO 17
 		var button = webiopi().createGPIOButton(17, "Light");
 
-		// append button to HTML element with ID="content" using jQuery
+		// append button to HTML element with ID="controls" using jQuery
 		$("#controls").append(button);
 	});
 		
