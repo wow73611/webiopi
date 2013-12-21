@@ -25,7 +25,7 @@ home
     - html
 }}}
 
-=Python script=
+==Python script==
 Create a *script.py* file in your *python * folder, eg. */home/pi/myproject/python/script.py*. This file will be loaded and executed by the WebIOPi server.
 
 {{{
