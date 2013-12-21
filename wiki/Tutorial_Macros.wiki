@@ -1,5 +1,5 @@
 =Tutorial : Using macros=
-Once we can [Tutorial_Basis control some light with automatic turn on/off], we may want to change the on/off hours from the UI. We can use webiopi macros to achieve it. Macros are custom Pythons functions automatically bind to the REST API, so they are remotely callable. They allow to remotely trigger complex computation on the Raspberry Pi or manual events, trigger multiple GPIO at the same time, change settings...
+Once we can [Tutorial_Basis control some light with automatic turn on/off], we may want to change the on/off hours from the UI. We can use webiopi macros to achieve it. Macros are custom Pythons functions automatically bound to the REST API, so they are remotely callable. They allow to remotely trigger complex computation on the Raspberry Pi or manual events, trigger multiple GPIO at the same time, change settings...
 
 ==Adding macro in the Python script==
 Registering macros to the WebIOPi server only requires a single Python decorator before each function. From the [Tutorial_Basis Framework Basis Tutorial], edit and update the Python script file, eg. */home/pi/myproject/python/script.py*.
