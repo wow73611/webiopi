@@ -161,6 +161,6 @@ To debug your script and config, you should first run WebIOPi foreground before 
 sudo webiopi -d -c /etc/webiopi/config
 }}}
 
-You can now open your browser to your Raspberry Pi IP at port 8000 (http://raspberrypi:8000/)
+You can now open your browser to your Raspberry Pi IP at port 8000 (http://raspberrypi:8000/) and control a light/led connected to GPIO 17.
 
 <p align="center">http://trouch.com/wp-content/uploads/2013/12/webiopi_tutorial_basis.png</p>
