@@ -1,6 +1,3 @@
-  * [README Readme]
-  * [CHANGELOG Changelog]
-  * [ROADMAP Roadmap]
   * Tutorials
     * [INSTALL Installation]
     * [PASSWORD Change Password]
@@ -21,3 +18,5 @@
       * [DIGITAL GPIO Expanders]
       * [ANALOG Analog Converters]
       * [SENSOR Sensors]
+  * [CHANGELOG Changelog]
+  * [ROADMAP Roadmap]
