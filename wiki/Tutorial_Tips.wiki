@@ -1,7 +1,7 @@
 =Hacker Tips=
 This page gives few tips to ease your life when using the WebIOPi application and framework.
 
-==Create a dedicated folder to your project==
+==Create a dedicated folder for your project==
 Typically in your home folder (*/home/pi/myproject*)
 ----
 
