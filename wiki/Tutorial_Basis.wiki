@@ -13,7 +13,8 @@ Assume we simply want a button to control a light, which will be automatically t
 
 
 ==Prerequisites==
-  # Create a folder somewhere, for instance */home/pi/myproject*. _This is the main folder._
+  # If not already done, [INSTALL install] WebIOPi on your Raspberry Pi.
+  # Create a folder somewhere on your Pi, for instance */home/pi/myproject*. _This is the main folder._
   # Create another *python* folder in the folder previously created. _We will store Python script file here._
   # Create another *html* folder next to *python*. _We will store HTML and other ressources here._
 You should have something like this :
