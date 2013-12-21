@@ -17,6 +17,6 @@
     * [RESTAPI GPIO / REST API]
     * [DEVICES Supported Devices]
     * Devices library
-      * [DIGITAL I/O Expanders]
+      * [DIGITAL GPIO Expanders]
       * [ANALOG Analog Converters]
       * [SENSOR Sensors]
