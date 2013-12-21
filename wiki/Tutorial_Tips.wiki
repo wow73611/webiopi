@@ -1,0 +1,27 @@
+=Hacker Tips=
+This page gives few tips to ease your life when using the WebIOPi application and framework.
+
+==Create a dedicated folder to your project==
+Typically in your home folder (*/home/pi*)
+----
+
+==Don't edit orignal HTML files, make copies and use doc-root configuration instead==
+To be able to use default web apps and debugs your circuits
+----
+ 
+==Launch WebIOPi foreground to debug your scripts and REST calls==
+{{{
+sudo webiopi -d -c /etc/webiopi/config
+}}}
+----
+
+==Use a decent powered computer==
+To edit your project files and access Internet documentations.
+----
+
+==Use your Pi headless==
+Learn on how to use SSH to remotely administrate your Pi.
+----
+
+==Use network shares to edit files==
+Instead of uploading files. So you can remotely edit files, like if they was on your computer. If you are on Windows, install Samba on your Pi. If your are on Mac, install Netatalk instead.
