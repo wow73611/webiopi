@@ -70,13 +70,13 @@ def destroy():
 }}}
 
 ==Javascript Library==
-All functions from drivers are bind to the REST API. Most of them are also available directly in the Javascript library. Simply pass the configured name for the device to the Javascript constructor.
+All functions from drivers are bound to the REST API. Most of them are also available directly in the Javascript library. Simply pass the configured name for the device to the Javascript constructor.
 {{{
 
 }}}
 
 ==Advanced Python script==
-If you don't need or don't want your devices to be bind to the REST API, you can avoid setting them in the configuration file and initialize the driver by yourself. You will just need to import the driver from the correct package. You can also use the whole library in your own Python script, without the WebIOPi HTTP server.
+If you don't need or don't want your devices to be bound to the REST API, you can avoid setting them in the configuration file and initialize the driver by yourself. You will just need to import the driver from the correct package. You can also use the whole library in your own Python script, without the WebIOPi HTTP server.
 
 For instance, with our BMP085 and MCP23008 :
 {{{
