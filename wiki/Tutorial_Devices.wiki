@@ -18,6 +18,8 @@ All supported devices can be used in your Python script, from the REST API, the 
 ==Testing Devices==
 Before using devices in your Pythons script or custom UI, you may need to debug your circuitry and at least, verify it works well with the WebIOPi environment. You don't need to write any line of code to test your devices, thanks to the WebIOPi configuration file.
 
+Edit */etc/webiopi/config*.
+
 Assume we have a [BMP085] I2C Temperature and Pressure sensor, simply add following line in the *`[DEVICES]`* section to register it with the name *bmp*. This name will be used to identify the sensor in the whole system.
 {{{
 [DEVICES]
