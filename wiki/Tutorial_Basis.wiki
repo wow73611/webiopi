@@ -144,7 +144,7 @@ doc-root = /home/pi/myproject/html
 ...
 }}}
 
-The two steps above are enough to run our app, but we want to limit remote control to the Light only.
+The two steps above are enough to run our app, but we want to limit remote control to the Light only. By default, we can remotely change function and value of all GPIO.
   * Locate *`[REST]`* section, add following lines
 {{{
 ...
