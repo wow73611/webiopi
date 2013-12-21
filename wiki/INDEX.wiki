@@ -7,6 +7,8 @@
     * [Tutorial_Basis Framework Basis]
     * [Tutorial_Macros Using Macros]
     * [Tutorial_Devices Using Devices]
+    * [PYTHONCLIENT Python client]
+    * [JAVACLIENT Java client]
   * Documentation
     * [CONFIGURATION Configuration]
     * [DEVICES Supported Devices]
@@ -18,6 +20,3 @@
       * [DIGITAL Digital]
       * [ANALOG Analog]
       * [SENSOR Sensors]
-  * Clients
-    * [PYTHONCLIENT Python]
-    * [JAVACLIENT Java]
