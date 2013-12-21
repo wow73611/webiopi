@@ -18,7 +18,7 @@ def destroy():
 
 @webiopi.macro
 def getLightHours():
-    return "%d-%d" % (HOUR_ON, HOUR_OFF)
+    return "%d;%d" % (HOUR_ON, HOUR_OFF)
 
 @webiopi.macro
 def setLightHours(on, off):
@@ -28,4 +28,18 @@ def setLightHours(on, off):
 
 }}}
 
+Both get/setLightHours functions are declared to WebIOPi using the *@webiopi.macro* decorator. The first one return a string containing both ON and OFF hours separated by a semicolon. The second function casts arguments received and set ON and OFF hours as well as returning the effective hours to give a feedback to the remote UI.
+
 ==Calling macros from Javascript==
+Using macros from Javascript is really easy. The most difficult part is to interact with the UI to retrieve data typed by the user and display the result.
+
+{{{
+<html>
+...
+<body>
+Turn On at :<input type=text" id="inputOn" /><br/>
+Turn Off at: <input type=text" id="inputOff" /><br/>
+<div id="controls"></div>
+</body>
+</html>
+}}}
