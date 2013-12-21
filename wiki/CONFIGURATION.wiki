@@ -51,6 +51,7 @@ myscript = /home/pi/webiopi/examples/scripts/macros/script.py
 }}}
 
 = Device registration =
+See [DEVICES supported devices] page for more information about devices, board and components you can use with webiopi.
 {{{
 [DEVICES]
 # Device configuration syntax:
