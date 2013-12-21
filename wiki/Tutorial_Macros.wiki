@@ -2,7 +2,8 @@
 If we want to change the on/off hours from the UI, we can use webiopi macros. Macros are custom Pythons functions automatically binded to the REST API, so they are remotely callable. They allow to remotely trigger complex computation on the Raspberry Pi or manual events, trigger multiple GPIO at the same time, change settings...
 
 ==Adding macro in the Python script==
-Registering macros to the WebIOPi server only requires a single Python decorator before each function.
+Registering macros to the WebIOPi server only requires a single Python decorator before each function. From the [Tutorial_Basis Framework Basis Tutorial], edit and update the Python script file, eg. */home/pi/myproject/python/script.py*.
+
 {{{
 import webiopi
 ...
@@ -32,8 +33,9 @@ def setLightHours(on, off):
 Both get/setLightHours functions are declared to WebIOPi using the *@webiopi.macro* decorator. The first one return a string containing both ON and OFF hours separated by a semicolon. The second function casts arguments received and set ON and OFF hours as well as returning the effective hours to give a feedback to the remote UI.
 
 ==Calling macros from Javascript==
-Using macros from Javascript is really easy. The most difficult part is to interact with the UI to retrieve data typed by the user and display the result.
+Using macros from Javascript is really easy. The most difficult part is to interact with the UI to retrieve data typed by the user and display the result. Edit the *index.html* file from the [Tutorial_Basis Framework Basis Tutorial]. 
 
+First, add inputs controls and labels in the `<body>` part.
 {{{
 <html>
 ...
@@ -45,6 +47,7 @@ Turn Off at: <input type="text" id="inputOff" /><br/>
 </html>
 }}}
 
+Then update the *webiopi().ready()* call.
 {{{
         webiopi().ready(function() {
 
