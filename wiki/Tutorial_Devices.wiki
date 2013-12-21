@@ -42,7 +42,7 @@ Following example shows several devices displayed in the monitor.
 [...]
 
 ==WebIOPi Python scripts : Heater example ==
-When devices are named in the configuration file, drivers are automatically called to initialize the device. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported.
+When devices are named in the configuration file, drivers are automatically called to initialize the device. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported. You will find a link to all interfaces supported with a complete function list on the top of each device wiki pages. See [BMP085] and [MCP230xx] for instance.
 {{{
 import webiopi
 GPIO = webiopi.GPIO # Helper for LOW/HIGH values
