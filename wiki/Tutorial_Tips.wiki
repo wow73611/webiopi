@@ -2,7 +2,7 @@
 This page gives few tips to ease your life when using the WebIOPi application and framework.
 
 ==Create a dedicated folder to your project==
-Typically in your home folder (*/home/pi*)
+Typically in your home folder (*/home/pi/myproject*)
 ----
 
 ==Don't edit orignal HTML files, make copies and use doc-root configuration instead==
