@@ -37,6 +37,15 @@ Using macros from Javascript is really easy. The most difficult part is to inter
 {{{
 <html>
 ...
+<body>
+Turn On at :<input type="text" id="inputOn" /><br/>
+Turn Off at: <input type="text" id="inputOff" /><br/>
+<div id="controls"></div>
+</body>
+</html>
+}}}
+
+{{{
         webiopi().ready(function() {
 
 		var updateLightHours = function(macro, args, response) {
@@ -62,14 +71,5 @@ Using macros from Javascript is really easy. The most difficult part is to inter
                 webiopi().refreshGPIO(true);
 
         });
-
-...
-<body>
-Turn On at :<input type="text" id="inputOn" /><br/>
-Turn Off at: <input type="text" id="inputOff" /><br/>
-<div id="controls"></div>
-</body>
-</html>
 }}}
-
 <p align="center">http://trouch.com/wp-content/uploads/2013/12/webiopi_tutorial_macros.png</p>
