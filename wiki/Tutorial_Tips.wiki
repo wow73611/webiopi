@@ -6,7 +6,7 @@ Typically in your home folder (*/home/pi/myproject*)
 ----
 
 ==Don't edit orignal HTML files, make copies and use doc-root configuration instead==
-To be able to use default web apps and debugs your circuits
+To be able to use default web apps and debug your circuits
 ----
  
 ==Launch WebIOPi foreground to debug your scripts and REST calls==
