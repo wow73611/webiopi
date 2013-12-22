@@ -1,10 +1,10 @@
 =Tutorial : Using devices=
-WebIOPi include several drivers to directly control over 30 electronic devices. It provide a consistent and common abstraction for most used sensors, analog converters, and GPIO expanders. See the [DEVICES supported devices] pages for a complete listing.
+WebIOPi include several drivers to directly control over 30 electronic devices. It provides a consistent and common abstraction for most used sensors, analog converters, and GPIO expanders. See the [DEVICES supported devices] pages for a complete listing.
 
-All supported devices can be used in your Python script, from the REST API, the Javascript library, or even from the [PYTHONCLIENT Python] Python or [JAVACLIENT Java] Client. Function provided depend on the devices type. Devices can support one or multiples interfaces. Interfaces are grouped in 3 packages :
+All supported devices can be used in your Python script, from the REST API, the Javascript library, or even from the [PYTHONCLIENT Python] or [JAVACLIENT Java] Client. Function provided depend on the devices type. Devices can support one or multiples interfaces. Interfaces are grouped in 3 packages :
 
   * [DIGITAL Digital]
-    * GPIOPort
+    * GPIOPort (I/O Expanders)
   * [ANALOG Analog]
     * ADC (Analog to Digital Converter, ie. analog inputs)
     * DAC (Digital to Analog Converter, ie. analog outputs)
