@@ -157,7 +157,7 @@ gpio-post-function = false
 }}}
 
 
-==Running==
+==Testing==
 To debug your script and config, you should first run WebIOPi foreground before using the daemon service :
 {{{
 sudo webiopi -d -c /etc/webiopi/config
