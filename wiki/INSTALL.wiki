@@ -1,6 +1,5 @@
-_WebIOPi is developed and tested on *Raspbian*._
 =Installation=
-You only need Python, either 2.7 or 3.2. Download, then extract and install WebIOPi. The setup script will automatically download and install required dependencies using apt-get. You may have to manually install GCC and Python development headers if you are _not_ using Raspbian.
+_WebIOPi is developed and tested on *Raspbian*._ You only need Python, either 2.7 or 3.2. Download, then extract and install WebIOPi. The setup script will automatically download and install required dependencies using apt-get. You may have to manually install GCC and Python development headers if you are _not_ using Raspbian.
 _Setup may take a moment._
 
 {{{
