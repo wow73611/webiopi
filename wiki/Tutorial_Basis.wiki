@@ -80,7 +80,9 @@ That's it ! No HTTP boring stuff. The file will be loaded by the WebIOPi server 
 Create a *index.html* file in your *html* folder, eg. */home/pi/myproject/html/index.html*.
 The WebIOPi Javascript library allows you to make your own interface easily with buttons bound to GPIO. You only need a single `<script>` tag to include */webiopi.js*. It will then automatically load jQuery, a nice JS library.
 
-The file is composed of few HTML tags, including a little Javascript part and few CSS lines. The most important to take care about is the anonymous Javascript function passed to WebIOPi JS library with *webiopi().ready()*. This ensure WebIOPi and jQuery libraries are loaded before modifying the UI. Also take take of the parenthesis when prefixing functions calls with *webiopi()*. After the button creation, we use a jQuery function to append it to a HTML element, declared later in the *`<body>`* tag.
+_You don't need to put webiopi.js and jquery.js in your project html folder. You just need the `<script>` tag in your index.html. The WebIOPi server filters browsers requests to serves both webiopi.js and jquery.js files from the default WebIOPi resource folder._
+
+The index.html is composed of few HTML tags, including a little Javascript part and few CSS lines. The most important to take care about is the anonymous Javascript function passed to WebIOPi JS library with *webiopi().ready()*. This ensure WebIOPi and jQuery libraries are loaded before modifying the UI. Also take take of the parenthesis when prefixing functions calls with *webiopi()*. After the button creation, we use a jQuery function to append it to a HTML element, declared later in the *`<body>`* tag.
 
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -164,5 +166,7 @@ sudo webiopi -d -c /etc/webiopi/config
 }}}
 
 You can now open your browser to your Raspberry Pi IP at port 8000 (http://raspberrypi:8000/) and control a light/led connected to GPIO 17.
+
+You can then follow the tutorial on [Tutorial_Macros macros] to learn how to remotely change on and off hours.
 
 <p align="center">http://trouch.com/wp-content/uploads/2013/12/webiopi_tutorial_basis.png</p>
