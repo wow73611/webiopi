@@ -1,4 +1,5 @@
 =Tutorial : Using macros=
+==Programmable Light control==
 Once we can [Tutorial_Basis control some light with automatic turn on/off], we may want to change the on/off hours from the UI. We can use webiopi macros to achieve it. Macros are custom Pythons functions automatically bound to the REST API, so they are remotely callable. They allow to remotely trigger complex computation on the Raspberry Pi or manual events, trigger multiple GPIO at the same time, change settings...
 
 ==Adding macro in the Python script==
