@@ -39,8 +39,10 @@ Ensure you don't have any *doc-root* directive in the *`[HTTP]`* section to use 
 Following example shows several devices displayed in the monitor.
 <p align="center">http://trouch.com/wp-content/uploads/2013/03/webiopi-0.6-devices1.png</p>
 
-==Python scripts==
-When devices are named in the configuration file, drivers are automatically called to initialize the device. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported. You will find a link to all interfaces supported with a complete function list on the top of each device wiki pages. See [BMP085] and [MCP230xx] for instance.
+==Devices in Python scripts with REST mapping==
+When devices are named in the configuration file, drivers are automatically called to initialize the device and mapped to the REST API. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported. You will find a link to all interfaces supported with a complete function list on the top of each device wiki pages. See [BMP085] and [MCP230xx] for instance.
+
+The following example automatically turns on/off the heater, plugged on a GPIO expander, depending on the temperature given by a the sensor.
 {{{
 import webiopi
 GPIO = webiopi.GPIO # Helper for LOW/HIGH values
@@ -48,47 +50,70 @@ HEATER = 0 # Heater plugged on the Expander Pin 0
 MIN = 20 # Minimum temperature in celsius
 MAX = 22 # Maximum temperature in celsius
 
+# setup function is automatically called at WebIOPi startup
 def setup():
     gpio0 = webiopi.deviceInstance("gpio0") # retrieve the device named "gpio0" in the configuration 
     gpio0.setFunction(HEATER, GPIO.OUT)
 
+# loop function is repeatedly called by WebIOPi 
 def loop():
     bmp = webiopi.deviceInstance("bmp") # retrieve the device named "bmp" in the configuration
     gpio0 = webiopi.deviceInstance("gpio0") # retrieve the device named "gpio0" in the configuration 
     celsius = bmp.getCelsius() # retrieve current temperature
 
     # Turn ON heater when passing below the minimum temperature
-    if (celcius < MIN):
+    if (celsius < MIN):
         gpio0.digitalWrite(HEATER, GPIO.HIGH)
 
    # Turn OFF heater when reaching maximum temperature
-    if (celcius >= MAX):
+    if (celsius >= MAX):
         gpio0.digitalWrite(HEATER, GPIO.LOW)
 
+# destroy function is called at WebIOPi shutdown
 def destroy():
     gpio0 = webiopi.deviceInstance("gpio0") # retrieve the device named "gpio0" in the configuration 
     gpio0.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
 }}}
 
-==Advanced Python script==
+==Devices in Python script without REST mapping==
 If you don't need or don't want your devices to be bound to the REST API, you can avoid setting them in the configuration file and initialize the driver by yourself. You will just need to import the driver from the correct package. You can also use the whole library in your own Python script, without the WebIOPi HTTP server.
 
 For instance, with our BMP085 and MCP23008 :
 {{{
-# import drivers
+import webiopi
+
+# load drivers
 from webiopi.devices.sensor import BMP085
 from webiopi.devices.digital import MCP23008
 
+GPIO = webiopi.GPIO # Helper for LOW/HIGH values
+HEATER = 0 # Heater plugged on the Expander Pin 0
+MIN = 20 # Minimum temperature in celsius
+MAX = 22 # Maximum temperature in celsius
+
 # initialize drivers
 bmp = BMP085()
-gpio0 = MCP23017(slave=0x20)
+gpio0 = MCP23008(slave=0x20)
 
+# setup function is automatically called at WebIOPi startup
 def setup():
-...
+    gpio0.setFunction(HEATER, GPIO.OUT)
 
+# loop function is repeatedly called by WebIOPi 
 def loop():
-...
+    celsius = bmp.getCelsius() # retrieve current temperature
 
+    # Turn ON heater when passing below the minimum temperature
+    if (celsius < MIN):
+        gpio0.digitalWrite(HEATER, GPIO.HIGH)
+
+   # Turn OFF heater when reaching maximum temperature
+    if (celsius >= MAX):
+        gpio0.digitalWrite(HEATER, GPIO.LOW)
+
+# destroy function is called at WebIOPi shutdown
+def destroy():
+    gpio0.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
 }}}
 
 ==Javascript Library==
