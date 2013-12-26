@@ -39,7 +39,7 @@ Ensure you don't have any *doc-root* directive in the *`[HTTP]`* section to use 
 Following example shows several devices displayed in the monitor.
 <p align="center">http://trouch.com/wp-content/uploads/2013/03/webiopi-0.6-devices1.png</p>
 
-==Python scripts : Heater example ==
+==Python scripts==
 When devices are named in the configuration file, drivers are automatically called to initialize the device. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported. You will find a link to all interfaces supported with a complete function list on the top of each device wiki pages. See [BMP085] and [MCP230xx] for instance.
 {{{
 import webiopi
@@ -70,12 +70,6 @@ def destroy():
     gpio0.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
 }}}
 
-==Javascript Library==
-All functions from drivers are bound to the REST API. Most of them are also available directly in the Javascript library. Simply pass the configured name for the device to the Javascript constructor.
-{{{
-(missing example)
-}}}
-
 ==Advanced Python script==
 If you don't need or don't want your devices to be bound to the REST API, you can avoid setting them in the configuration file and initialize the driver by yourself. You will just need to import the driver from the correct package. You can also use the whole library in your own Python script, without the WebIOPi HTTP server.
 
@@ -95,4 +89,10 @@ def setup():
 def loop():
 ...
 
+}}}
+
+==Javascript Library==
+If you set the device in the configuration file, all functions from the driver are bound to the REST API. Most of them are also available directly in the Javascript library. Simply pass the configured name for the device to the Javascript constructor.
+{{{
+(missing example)
 }}}
