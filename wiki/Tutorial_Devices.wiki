@@ -1,4 +1,5 @@
 =Tutorial : Using devices=
+==Programmable Heater with BMP085 and MCP230xx==
 WebIOPi include several drivers to directly control over 30 electronic devices. It provides a consistent and common abstraction for most used sensors, analog converters, and GPIO expanders. See the [DEVICES supported devices] pages for a complete listing.
 
 All supported devices can be used in your Python script, from the REST API, the Javascript library, or even from the [PYTHONCLIENT Python] or [JAVACLIENT Java] Client. Function provided depend on the devices type. Devices can support one or multiples interfaces. Interfaces are grouped in 3 packages :
