@@ -33,7 +33,7 @@ $ sudo webiopi -d -c /etc/webiopi/config
 You're done, and ready to enjoy WebIOPi ! But the server and GPIO state will be lost when you'll stop the script (CTRL-C) or close the terminal.
 
 =Running WebIOPi (Daemon)=
-You can also start/stop the background service, the file /etc/webiopi/config will be used :
+You can also start/stop the background service, the configuration will be loaded from /etc/webiopi/config.
 {{{
 $ sudo /etc/init.d/webiopi start
 and
@@ -52,11 +52,12 @@ If your are directly using your Raspberry Pi with keyboard/mouse/display plugged
 
 If your Raspberry Pi is connected to your network, you can open a browser to http://raspberrypi:8000/ with any device of your network. _Replace raspberrypi by its IP._
 
-You can even add a port redirection on your router to control your GPIOs over Internet !
+You can even add a port redirection on your router to use WebIOPi over Internet !
 
 *Default user is "webiopi" and password is "raspberry"*
 
 By choosing the GPIO Header link on the main page, you will be able to control GPIO using a web UI which looks like the board header.
   * Click/Tap the OUT/IN button to change GPIO direction.
   * Click/Tap pins to change the GPIO output state.
+
 http://trouch.com/wp-content/uploads/2012/08/webiopi-chrome.png
