@@ -98,10 +98,11 @@ The index.html is composed of few HTML tags, including a little Javascript part 
 		// create a "Light" labeled button for GPIO 17
 		var button = webiopi().createGPIOButton(17, "Light");
 
-		// append button to HTML element with ID="controls" using jQuery
+		// Append button to HTML element with ID="controls" using jQuery
 		$("#controls").append(button);
 
-                // auto refresh UI
+		// Refresh GPIO buttons
+		// pass true to refresh repeatedly of false to refresh once
                 webiopi().refreshGPIO(true);
 	});
 		
@@ -159,6 +160,9 @@ gpio-post-value = true
 gpio-post-function = false 
 ...
 }}}
+  * *gpio-export* limits GPIO exported on the REST API (using BCM numbering)
+  * *gpio-post-value* allows/forbids to remotely change GPIO values (LOW/HIGH)
+  * *gpio-post-function* allows/forbids to remotely change GPIO function (IN/OUT)
 
 
 ==Testing==
