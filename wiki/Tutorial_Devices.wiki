@@ -21,7 +21,7 @@ Before using devices in your Pythons script or custom UI, you may need to debug 
 
 Edit */etc/webiopi/config*.
 
-Assume we have a [TMP102] I2C Temperature sensor, simply add following line in the *`[DEVICES]`* section to register it with the name *tmp*. This name will be used to identify the sensor in the whole system.
+Assume we have a [TMPXXX TMP102] I2C Temperature sensor, simply add following line in the *`[DEVICES]`* section to register it with the name *tmp*. This name will be used to identify the sensor in the whole system.
 {{{
 [DEVICES]
 tmp = TMP102
