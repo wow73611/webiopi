@@ -14,9 +14,14 @@
     * [CSS CSS naming]
     * [RESTAPI GPIO / REST API]
     * [DEVICES Supported Devices]
-    * Devices library
+    * Device library
       * [DIGITAL GPIO Expanders]
       * [ANALOG Analog Converters]
       * [SENSOR Sensors]
+    * Bus library
+      * [SERIAL Serial]
+      * [I2C]
+      * [SPI]
+      * [1WIRE 1-Wire]
   * [CHANGELOG Changelog]
   * [ROADMAP Roadmap]
