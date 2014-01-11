@@ -1,5 +1,5 @@
 =Tutorial : Using devices=
-==Programmable Heater with BMP085 and MCP230xx==
+==Programmable Heater with TMP102 and MCP23017==
 WebIOPi include several drivers to directly control over 30 electronic devices. It provides a consistent and common abstraction for most used sensors, analog converters, and GPIO expanders. See the [DEVICES supported devices] pages for a complete listing.
 
 All supported devices can be used in your Python script, from the REST API, the Javascript library, or even from the [PYTHONCLIENT Python] or [JAVACLIENT Java] Client. Function provided depend on the devices type. Devices can support one or multiples interfaces. Interfaces are grouped in 3 packages :
@@ -21,26 +21,25 @@ Before using devices in your Pythons script or custom UI, you may need to debug 
 
 Edit */etc/webiopi/config*.
 
-Assume we have a [BMP085] I2C Temperature and Pressure sensor, simply add following line in the *`[DEVICES]`* section to register it with the name *bmp*. This name will be used to identify the sensor in the whole system.
+Assume we have a [TMP102] I2C Temperature sensor, simply add following line in the *`[DEVICES]`* section to register it with the name *tmp*. This name will be used to identify the sensor in the whole system.
 {{{
 [DEVICES]
-bmp = BMP085
+tmp = TMP102
 }}}
 
-Assume we also have a [MCP230xx MCP23008] I2C GPIO Expander, then we can also add the optional I2C slave address.
+Assume we also have a [MCP230xx MCP23017] I2C GPIO Expander, then we can also add the optional I2C slave address.
 {{{
 [DEVICES]
-bmp = BMP085
-gpio0 = MCP23008 slave:0x20
+tmp = TMP102
+mcp = MCP23017 slave:0x20
 }}}
 
 Ensure you don't have any *doc-root* directive in the *`[HTTP]`* section to use defaults web apps, save, and restart webiopi to use the device monitor (http://raspberrypi:8000/app/devices-monitor/).
 
-Following example shows several devices displayed in the monitor.
-<p align="center">http://trouch.com/wp-content/uploads/2013/03/webiopi-0.6-devices1.png</p>
+<p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorials-device-test.png</p>
 
 ==Devices in Python scripts with REST mapping==
-When devices are named in the configuration file, drivers are automatically called to initialize the device and mapped to the REST API. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported. You will find a link to all interfaces supported with a complete function list on the top of each device wiki pages. See [BMP085] and [MCP230xx] for instance.
+When devices are named in the configuration file, drivers are automatically called to initialize the device and mapped to the REST API. We need to use the *webiopi.deviceInstance(name)* function in the Python script to retrieve the device object instance for the given name. Then we can use functions of the drivers, depending of interfaces supported. You will find a link to all interfaces supported with a complete function list on the top of each device wiki pages. See [TMP102] and [MCP230xx] for instance.
 
 The following example automatically turns on/off the heater, plugged on a GPIO expander, depending on the temperature given by a the sensor.
 {{{
@@ -52,42 +51,42 @@ MAX = 22 # Maximum temperature in celsius
 
 # setup function is automatically called at WebIOPi startup
 def setup():
-    gpio0 = webiopi.deviceInstance("gpio0") # retrieve the device named "gpio0" in the configuration 
-    gpio0.setFunction(HEATER, GPIO.OUT)
+    mcp = webiopi.deviceInstance("mcp") # retrieve the device named "mcp" in the configuration 
+    mcp.setFunction(HEATER, GPIO.OUT)
 
 # loop function is repeatedly called by WebIOPi 
 def loop():
-    bmp = webiopi.deviceInstance("bmp") # retrieve the device named "bmp" in the configuration
-    gpio0 = webiopi.deviceInstance("gpio0") # retrieve the device named "gpio0" in the configuration 
-    celsius = bmp.getCelsius() # retrieve current temperature
+    tmp = webiopi.deviceInstance("tmp") # retrieve the device named "tmp" in the configuration
+    mcp = webiopi.deviceInstance("mcp") # retrieve the device named "mcp" in the configuration 
+    celsius = tmp.getCelsius() # retrieve current temperature
 
     # Turn ON heater when passing below the minimum temperature
     if (celsius < MIN):
-        gpio0.digitalWrite(HEATER, GPIO.HIGH)
+        mcp.digitalWrite(HEATER, GPIO.HIGH)
 
     # Turn OFF heater when reaching maximum temperature
     if (celsius >= MAX):
-        gpio0.digitalWrite(HEATER, GPIO.LOW)
+        mcp.digitalWrite(HEATER, GPIO.LOW)
 
     # gives CPU some time before looping again
     webiopi.sleep(1)
 
 # destroy function is called at WebIOPi shutdown
 def destroy():
-    gpio0 = webiopi.deviceInstance("gpio0") # retrieve the device named "gpio0" in the configuration 
-    gpio0.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
+    mcp = webiopi.deviceInstance("mcp") # retrieve the device named "mcp" in the configuration 
+    mcp.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
 }}}
 
 ==Devices in Python scripts without REST mapping==
 If you don't need or don't want your devices to be bound to the REST API, you can avoid setting them in the configuration file and initialize the driver by yourself. You will just need to import the driver from the correct package. You can also use the whole library in your own Python script, without the WebIOPi HTTP server.
 
-For instance, with our BMP085 and MCP23008 :
+For instance, with our TMP102 and MCP23017 :
 {{{
 import webiopi
 
 # load drivers
-from webiopi.devices.sensor import BMP085
-from webiopi.devices.digital import MCP23008
+from webiopi.devices.sensor import TMP102
+from webiopi.devices.digital import MCP23017
 
 GPIO = webiopi.GPIO # Helper for LOW/HIGH values
 HEATER = 0 # Heater plugged on the Expander Pin 0
@@ -95,31 +94,31 @@ MIN = 20 # Minimum temperature in celsius
 MAX = 22 # Maximum temperature in celsius
 
 # initialize drivers
-bmp = BMP085()
-gpio0 = MCP23008(slave=0x20)
+tmp = TMP102()
+mcp = MCP23017(slave=0x20)
 
 # setup function is automatically called at WebIOPi startup
 def setup():
-    gpio0.setFunction(HEATER, GPIO.OUT)
+    mcp.setFunction(HEATER, GPIO.OUT)
 
 # loop function is repeatedly called by WebIOPi 
 def loop():
-    celsius = bmp.getCelsius() # retrieve current temperature
+    celsius = tmp.getCelsius() # retrieve current temperature
 
     # Turn ON heater when passing below the minimum temperature
     if (celsius < MIN):
-        gpio0.digitalWrite(HEATER, GPIO.HIGH)
+        mcp.digitalWrite(HEATER, GPIO.HIGH)
 
     # Turn OFF heater when reaching maximum temperature
     if (celsius >= MAX):
-        gpio0.digitalWrite(HEATER, GPIO.LOW)
+        mcp.digitalWrite(HEATER, GPIO.LOW)
 
     # gives CPU some time before looping again
     webiopi.sleep(1)
 
 # destroy function is called at WebIOPi shutdown
 def destroy():
-    gpio0.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
+    mcp.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
 }}}
 
 ==Javascript Library==
