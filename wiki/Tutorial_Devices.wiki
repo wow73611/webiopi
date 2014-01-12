@@ -80,12 +80,14 @@ def destroy():
     mcp = webiopi.deviceInstance("mcp") # retrieve the device named "mcp" in the configuration 
     mcp.digitalWrite(HEATER, GPIO.LOW) # turn off to avoid over heating
 
+# a simple macro to return heater mode
 @webiopi.macro
 def getMode():
     if (AUTO):
         return "auto"
     return "manual"
 
+# simple macro to set and return heater mode
 @webiopi.macro
 def setMode(mode):
     global AUTO
