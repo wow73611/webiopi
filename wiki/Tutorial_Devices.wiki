@@ -225,6 +225,8 @@ We can then add an important Javascript part to glue the buttons to the WebIOPi 
    </script>
 }}}
 
+Don't forget to define your script and change the doc-root setting in /etc/webiopi/config then start webiopi foreground. This example provide fixed temperature min/max, but you can mix this tutorial with the [Tutorial_Macros macro tutorial] to add few more controls.
+
 http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorials-heater.png
 
 ==Devices in Python scripts without REST mapping==
