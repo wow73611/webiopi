@@ -113,7 +113,10 @@ $ sudo webiopi -d -c /etc/webiopi/config
 
 ==Fast On-Board UART test==
 The quickest way to test the On-Board GPIO is to loop TX to RX using either a wire or a jumper ! When you write a data, you will receive it so you can read them back. When using the Serial monitor all data sent will be displayed back in the input area.
-<p align="center">http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg
 
+http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg
 <wiki:video url="http://www.youtube.com/watch?v=R1nkrfgNSLw"/>
-</p>
+
+==Python example==
+
+==Javascript example==
