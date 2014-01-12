@@ -208,3 +208,6 @@ void loop() {
   delay(1000);
 }
 }}}
+
+===Testing===
+<p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorial-ardu-monitor.png</p>
