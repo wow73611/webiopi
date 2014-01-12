@@ -13,7 +13,7 @@ This tutorials will learn you how to configure and use the embedded Serial drive
 If you prefer PySerial, you can use it inside WebIOPi macros, but you will not benefit from the REST binding and the Serial Monitor.
 
 ==Global Prerequisites : WebIOPi SVN update ==
-You will need to use the latest trunk from the SVN repository. There is a bug in the 0.6 release avoiding low-level binary interfacing. It has been fixed by r1368.
+<font color="red">*You will need to use the latest trunk from the SVN repository.*</font> There is a bug in the 0.6 release avoiding low-level binary interfacing. It has been fixed by r1368.
 {{{
 $ sudo aptitude update
 $ sudo aptitude install subversion
