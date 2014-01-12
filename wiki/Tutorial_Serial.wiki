@@ -180,10 +180,10 @@ def loop():
 }}}
 
 ==Arduino example==
-You will need an Arduino with something to monitor thought the analog input. It can be a variable thermistor, a photo-resistor, or anything you own. I'll take a simple potentiometer so I can change analog value by hand.
+You will need an Arduino with something to monitor thought the analog input. It can be a thermistor, a photo-resistor, or anything you own. I'll take a simple potentiometer so I can change analog value by hand.
 http://trouch.com/wp-content/uploads/2014/01/arduino-analog.png
 
-Upload following sketch on your Arduino board using your computer, then connect it your Pi with the USB cord.
+Upload following sketch on your Arduino board using your computer.
 {{{
 int analogValue = 0;
 int i;
@@ -201,7 +201,7 @@ void loop() {
     // print it on serial
     Serial.print(i);
     Serial.print("=");
-    Serial.println(analogValue);       // print as an ASCII-encoded decimal
+    Serial.println(analogValue);
   }
   
   // delay 1 second before the next reading:
@@ -210,9 +210,12 @@ void loop() {
 }}}
 
 ===Testing===
+You can then connect your Arduino to the Pi with the USB cord, set the appropriate Serial device in /etc/webiopi/config, then start WebIOPi.
+
 <p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorial-ardu-monitor.png</p>
 
 ===Python example===
+Instead of using Javascript Serial library, I prefer consume Arduino data directly on the server side, within a custom script, and provide a macro to ease UI interfacing.
 {{{
 import webiopi
 
