@@ -119,5 +119,21 @@ http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg
 <wiki:video url="http://www.youtube.com/watch?v=R1nkrfgNSLw"/>
 
 ==Python example==
+Just like with the other devices set in the config file, you need to use *webiopi.deviceInstance* to retrieve configured Serial device :
+{{{
+import webiopi
+
+def loop():
+    serial = webiopi.deviceInstance("serial") # retrieve device named "serial" in the config
+    serial.writeByte(0xFF) # write a single byte
+    serial.writeBytes([0x00, 0xFF,  ...]) # write a byte array
+    serial.write("some text") # write a string
+
+   if (serial.available() > 0):
+       value = serial.readByte() # read and return a single byte
+       values = serial.readBytes(serial.available()) # read all bytes available and return an array
+       data = serial.read() # read available data as string
+
+}}}
 
 ==Javascript example==
