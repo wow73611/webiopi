@@ -155,7 +155,7 @@ Be careful when using the REST API (with the Serial monitor) as well as using it
 If you need server computing, it's better to not set the Serial device in /etc/webiopi/config and create it by yourself in your script.
 
 ==Python example without REST mapping==
-There is much difference from the previous example, you just need to import Serial from the correct module, then you can instantiate a Serial object, passing the tty name and baudrate.
+There is no much difference from the previous example, you just need to import Serial from the correct module, then you can instantiate a Serial object, passing the tty name and baudrate.
 
 {{{
 import webiopi
