@@ -6,7 +6,7 @@ WebIOPi allows to use Serial devices natively without PySerial. It uses a lightw
 
 Serial driver also allows a RAW access directly with the REST API and so with the Javascript client library. This is only intended to be used with full-text Serial protocols, not for low-level and binary interfacing, for which macros still remains the best option.
 
-You can use the WebIOPi Serial driver for the onboard UART as well as USB adapters. For exemple, you can can connect an Arduino through the USB port or by wiring headers.
+You can use the WebIOPi Serial driver with the onboard UART as well as USB adapters. For exemple, you can can connect an Arduino through the USB port or by wiring headers.
 
 This tutorials will learn you how to configure and use the embedded Serial driver from the REST API as well as Python scripts.
 
