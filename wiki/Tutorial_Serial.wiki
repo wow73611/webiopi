@@ -235,9 +235,8 @@ def setup():
         serial.readString()
 
 def loop():
-#    global sensors
     if (serial.available() > 0):
-        data = serial.readString() # read available data, concat to previous buffer
+        data = serial.readString() # read available data
         lines = data.split("\r\n")  # split lines
         count = len(lines)          # count lines
 
