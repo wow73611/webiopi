@@ -129,6 +129,9 @@ http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg
 <wiki:video url="http://www.youtube.com/watch?v=R1nkrfgNSLw"/>
 
 ==Javascript example==
+{{{
+TODO
+}}}
 
 ==Python example with REST mapping==
 Just like with the other devices set in the config file, you need to use *webiopi.deviceInstance* to retrieve configured Serial device :
