@@ -12,7 +12,7 @@ This tutorials will learn you how to configure and use the embedded Serial drive
 
 If you prefer PySerial, you can use it inside WebIOPi macros, but you will not benefit from the REST binding and the Serial Monitor.
 
-==Global Prerequisites==
+==Global Prerequisites : WebIOPi SVN update ==
 You will need to use the latest trunk from the SVN repository. There is a bug in the 0.6 release avoiding low-level binary interfacing. It has been fixed by r1368.
 {{{
 $ sudo aptitude update
@@ -128,7 +128,9 @@ http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg
 
 <wiki:video url="http://www.youtube.com/watch?v=R1nkrfgNSLw"/>
 
-==Python example==
+==Javascript example==
+
+==Python example with REST mapping==
 Just like with the other devices set in the config file, you need to use *webiopi.deviceInstance* to retrieve configured Serial device :
 {{{
 def loop():
@@ -148,4 +150,61 @@ def loop():
     webiopi.sleep(1)
 }}}
 
-==Javascript example==
+Be careful when using the REST API (with the Serial monitor) as well as using it from a custom script, you may notice strange behavior if you read data in your script. When data is received, it can be read only once.
+
+If you need server computing, it's better to not set the Serial device in /etc/webiopi/config and create it by yourself in your script.
+
+==Python example without REST mapping==
+There is much difference from the previous example, you just need to import Serial from the correct module, then you can instantiate a Serial object, passing the tty name and baudrate.
+
+{{{
+import webiopi
+from webiopi.devices.serial import Serial
+
+serial = Serial("ttyAMA0", 9600)
+
+def loop():
+    serial.writeByte(0xFF) # write a single byte
+    serial.writeBytes([0x01, 0x02, 0xFF]) # write a byte array
+    serial.writeString("some text") # write a string
+
+    if (serial.available() > 0):
+        value = serial.readByte() # read and return a single byte
+        print("0x%X" % value)
+        values = serial.readBytes(3) # read 3 bytes and return an array
+        print(", ".join("0x%X" % i for i in values))
+        data = serial.readString() # read available data as string
+        print(data)
+
+    webiopi.sleep(1)
+}}}
+
+==Arduino example==
+You will need an Arduino with something to monitor thought the analog input. It can be a variable thermistor, a photo-resistor, or anything you own. I'll take a simple potentiometer so I can change analog value by hand.
+http://trouch.com/wp-content/uploads/2014/01/arduino-analog.png
+
+Upload following sketch on your Arduino board using your computer, then connect it your Pi with the USB cord.
+{{{
+int analogValue = 0;
+int i;
+
+void setup() {
+  // open the serial port at 9600 bps:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // read the analog input on all pins :
+  for (i = 0; i<=5; i++) {
+    analogValue = analogRead(i);
+
+    // print it on serial
+    Serial.print(i);
+    Serial.print("=");
+    Serial.println(analogValue);       // print as an ASCII-encoded decimal
+  }
+  
+  // delay 1 second before the next reading:
+  delay(1000);
+}
+}}}
