@@ -31,10 +31,15 @@ Instead of uploading files repeatedly on your Pi, you can remotely edit files, l
 Put all your Javascript code inside a separated *script.js* file, next to your *index.html*. Then use `<script>` tag in *index.html*.
 {{{
 <html>
-    <head>
-        <script type="text/javascript" src="/webiopi.js"></script>
-        <script type="text/javascript" src="script.js"></script>
+<head>
+    <title>My WebIOPi application</title>
+    <script type="text/javascript" src="/webiopi.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
 ...
+</body>
+</html>
 }}}
 Take note of the heading slash used to load webiopi.js but not for script.js.
 ----
@@ -43,10 +48,16 @@ Take note of the heading slash used to load webiopi.js but not for script.js.
 Put all your CSS code inside a separated *style.css* file, next to your *index.html*. Then use `<link>` tag in *index.html*.
 {{{
 <html>
-    <head>
-        <script type="text/javascript" src="/webiopi.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <title>My WebIOPi application</title>
+    <script type="text/javascript" src="/webiopi.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+...
+</body>
+</html>
 }}}
 ----
 
