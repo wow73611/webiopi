@@ -70,7 +70,7 @@ $ dmesg | tail
 }}}
 Take note of lasts lines, one include a tty name : *ttyACM0*.
 
-===Arduino (OLD) / FDTI Identification===
+===Arduino (OLD) / FTDI Identification===
 Right after plugged your old Arduino through USB or any FTDI USB based, you can use *dmesg* to find out the tty name :
 {{{
 $ dmesg | tail
