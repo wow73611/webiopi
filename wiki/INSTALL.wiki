@@ -36,7 +36,8 @@ You're done, and ready to enjoy WebIOPi ! But the server and GPIO state will be 
 You can also start/stop the background service, the configuration will be loaded from /etc/webiopi/config.
 {{{
 $ sudo /etc/init.d/webiopi start
-and
+}}}
+{{{
 $ sudo /etc/init.d/webiopi stop
 }}}
 
@@ -46,6 +47,10 @@ To setup your system to start webiopi at boot :
 $ sudo update-rc.d webiopi defaults
 }}}
 
+To remove webiopi start from boot :
+{{{
+$ sudo update-rc.d webiopi remove
+}}}
 
 =Usage=
 If your are directly using your Raspberry Pi with keyboard/mouse/display plugged,  open a browser to http://localhost:8000/
