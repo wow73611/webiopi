@@ -40,7 +40,7 @@ Become :
 {{{
 dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
 }}}
-Save, and reboot your Raspberry Pi
+*Save, and reboot* your Raspberry Pi. As you may already understood, *ttyAMA0* refers to the on-board Serial UART available through the GPIO header.
 
 ==USB Serial Prerequisite==
 Before using your USB Serial adapter, you need to find out its name.
@@ -88,4 +88,29 @@ $ ls /dev/tty*
 /dev/ttyprintk
 /dev/ttyUSB0
 }}}
-Here we can see linux terminals (ttyN), as well as an Arduino UNO (ttyACM0), on-board UART/GPIO (ttyAMA0) and Arduino/FTDI (ttyUSB0).
+Here we can see linux terminals (ttyN), as well as serial interfaces :
+  * *ttyACM0 :* Arduino UNO
+  * *ttyAMA0 :* On-board UART/GPIO
+  * *ttyUSB0 :* Arduino (old)/FTDI
+
+==WebIOPi Serial configuration==
+Configuring WebIOPi for Serial access is very easy once you know the tty name. Edit */etc/webiopi/config*, and in *[DEVICES]* section, add one of following line depending on your Serial interface.
+{{{
+[DEVICES]
+serial = Serial device:ttyAMA0 baudrate:9600
+uno = Serial device:ttyACM0 baudrate:9600
+ftdi = Serial device:ttyUSB0 baudrate:9600
+}}}
+The most important is to match the device name with the tty name you found earlier. You can then use any name you want before the equal (=) symbol. You can also change the baudrate to match your device baudrate.
+
+Save and start webiopi foreground in debug mode, you should see the Serial REST binding.
+{{{
+$ sudo webiopi -d -c /etc/webiopi/config
+...
+2014-01-12 17:32:51 - WebIOPi - INFO - Serial - Serial(/dev/ttyAMA0, 9600bps) mapped to REST API /devices/serial
+...
+}}}
+
+==Fast On-Board UART test==
+The quickest way to test the On-Board GPIO is to loop TX to RX using either a wire or a jumper ! When you write a data, you will receive it so you can read them back. When using the Serial monitor all data sent will be displayed back in the input area.
+<p align="center">http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg</p>
