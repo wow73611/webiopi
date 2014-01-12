@@ -1,5 +1,5 @@
 =Tutorial : Using devices=
-==Programmable Heater with TMP102 and MCP23017==
+==Programmable Heater with Temperature Sensor and GPIO Expander==
 WebIOPi include several drivers to directly control over 30 electronic devices. It provides a consistent and common abstraction for most used sensors, analog converters, and GPIO expanders. See the [DEVICES supported devices] pages for a complete listing.
 
 All supported devices can be used in your Python script, from the REST API, the Javascript library, or even from the [PYTHONCLIENT Python] or [JAVACLIENT Java] Client. Function provided depend on the devices type. Devices can support one or multiples interfaces. Interfaces are grouped in 3 packages :
@@ -18,12 +18,14 @@ All supported devices can be used in your Python script, from the REST API, the 
 
 
 ==Prerequisites==
-  # WebIOPi installed
+  # WebIOPi installed on your Raspberry
     * Follow [INSTALL Install Tutorial]
   # Know WebIOPi framework basis, and how to launch WebIOPi foreground (debug)
     * Follow [Tutorial_Basis Framework Basis Tutorial]
   # Know how to write and use macros
     * Follow [Tutorial_Macros Using Macros Tutorial]
+  # A supported [SENSOR#Temperature Temperature sensor]
+  # A supported [DIGITAL GPIO expander]
   # Know how to wire components on the Raspberry Pi
     * [http://google.com Google] about it. There is plenty example on Internet.
 
