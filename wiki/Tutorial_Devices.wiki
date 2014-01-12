@@ -21,13 +21,13 @@ Before using devices in your Pythons script or custom UI, you may need to debug 
 
 Edit */etc/webiopi/config*.
 
-Assume we have a [TMPXXX TMP102] I2C Temperature sensor, simply add following line in the *`[DEVICES]`* section to register it with the name *tmp*. This name will be used to identify the sensor in the whole system.
+Assume we have a [TMPXXX TMP102] I2C Temperature sensor, simply add following line in the *`[DEVICES]`* section to register it with the name *tmp*. This name will be used to identify the sensor in the whole system. I say a TMP102, but it can be any Temperature sensor supported by WebIOPi. Except from the config syntax, they all have the same functions.
 {{{
 [DEVICES]
 tmp = TMP102
 }}}
 
-Assume we also have a [MCP230xx MCP23017] I2C GPIO Expander, then we can also add the optional I2C slave address.
+Assume we also have a [MCP230xx MCP23017] I2C GPIO Expander, then we can also add the optional I2C slave address. Again, I say a MCP23017, but it can be any GPIO expander supported. Just adapt the config line to your chipset, the rest of the tutorial remains unchanged.
 {{{
 [DEVICES]
 tmp = TMP102
