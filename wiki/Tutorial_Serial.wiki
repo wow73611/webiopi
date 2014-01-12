@@ -12,6 +12,16 @@ This tutorials will learn you how to configure and use the embedded Serial drive
 
 If you prefer PySerial, you can use it inside WebIOPi macros, but you will not benefit from the REST binding and the Serial Monitor.
 
+==Global Prerequisites==
+You will need to use the latest trunk from the SVN repository. There is a bug in the 0.6 release avoiding low-level binary interfacing. It has been fixed by r1368.
+{{{
+$ sudo aptitude update
+$ sudo aptitude install subversion
+$ svn checkout http://webiopi.googlecode.com/svn/trunk/ webiopi-trunk
+$ cd webiopi-trunk
+$ sudo ./setup.sh
+}}}
+
 ==On-Board UART Prerequisites==
 If you want to use the Serial UART from the GPIO Header, you first need to disable few things, because it is used for boot debugging by default.
 
@@ -121,19 +131,21 @@ http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg
 ==Python example==
 Just like with the other devices set in the config file, you need to use *webiopi.deviceInstance* to retrieve configured Serial device :
 {{{
-import webiopi
-
 def loop():
     serial = webiopi.deviceInstance("serial") # retrieve device named "serial" in the config
     serial.writeByte(0xFF) # write a single byte
-    serial.writeBytes([0x00, 0xFF,  ...]) # write a byte array
-    serial.write("some text") # write a string
+    serial.writeBytes([0x01, 0x02, 0xFF]) # write a byte array
+    serial.writeString("some text") # write a string
 
-   if (serial.available() > 0):
-       value = serial.readByte() # read and return a single byte
-       values = serial.readBytes(serial.available()) # read all bytes available and return an array
-       data = serial.read() # read available data as string
+    if (serial.available() > 0):
+        value = serial.readByte() # read and return a single byte
+        print("0x%X" % value)
+        values = serial.readBytes(3) # read 3 bytes and return an array
+        print(", ".join("0x%X" % i for i in values))
+        data = serial.readString() # read available data as string
+        print(data)
 
+    webiopi.sleep(1)
 }}}
 
 ==Javascript example==
