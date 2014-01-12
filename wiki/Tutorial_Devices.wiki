@@ -16,8 +16,21 @@ All supported devices can be used in your Python script, from the REST API, the 
     * Luminosity
     * Distance
 
+
+==Prerequisites==
+  # WebIOPi installed
+    * Follow [INSTALL Install Tutorial]
+  # Know WebIOPi framework basis, and how to launch WebIOPi foreground (debug)
+    * Follow [Tutorial_Basis Framework Basis Tutorial]
+  # Know how to write and use macros
+    * Follow [Tutorial_Macros Using Macros Tutorial]
+  # Know how to wire components on the Raspberry Pi
+    * [http://google.com Google] about it. There is plenty example on Internet.
+
 ==Testing Devices==
 Before using devices in your Pythons script or custom UI, you may need to debug your circuitry and at least, verify it works well with the WebIOPi environment. You don't need to write any line of code to test your devices, thanks to the WebIOPi configuration file.
+
+*WebIOPi handles by itself linux modules loading to support I2C, SPI, and 1-Wire. But it only works if you do not use any other GPIO library. I suggest to reboot your Pi at this time.*
 
 Edit */etc/webiopi/config*.
 
