@@ -28,6 +28,7 @@ All supported devices can be used in your Python script, from the REST API, the 
   # A supported [DIGITAL GPIO expander]
   # Know how to wire components on the Raspberry Pi
     * [http://google.com Google] about it. There is plenty example on Internet.
+  # Check [Tutorial_Tips Hacker Tips]
 
 ==Testing Devices==
 Before using devices in your Pythons script or custom UI, you may need to debug your circuitry and at least, verify it works well with the WebIOPi environment. You don't need to write any line of code to test your devices, thanks to the WebIOPi configuration file.
