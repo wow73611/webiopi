@@ -156,7 +156,7 @@ We can then add an important Javascript part to glue the buttons to the WebIOPi 
 
         webiopi().ready(init);
 	
-	// defines function passed later to webiopi().ready()
+	// defines function passed to webiopi().ready()
 	function init() {
 		// setup helpers to remotely control devices
 		tmp = new Temperature("tmp");
