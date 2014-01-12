@@ -46,5 +46,5 @@ Put all your CSS code inside a separated *style.css* file, next to your *index.h
 ----
 
 ==Look on jQuery documentation==
-[http://api.jquery.com/ jQuery is the library used in the Javascript/HTML part with many function to help modifying the UI. There is also plenty examples on Internet.
+[http://api.jquery.com/ jQuery] is the library used in the Javascript/HTML part with many function to help modifying the UI. There is also plenty examples on Internet.
 ----
