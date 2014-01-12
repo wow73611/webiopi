@@ -2,7 +2,7 @@
 
 *With WebIOPi 0.6+, you can use Serial/I2C/SPI/1-Wire devices directly from the REST API without writing macros.*
 
-To do this, WebIOPi need somes drivers that inherits from devices abstractions classes. Low level acces to I2C/SPI/... is provided by lightweights classes available in the WebIOPi core without dependencies. Configuration is provided with the [http://webiopi.googlecode.com/svn/trunk/python/config /etc/webiopi/config] file. Devices and bus drivers can also be directly used in your Python script.
+WebIOPi drivers inherit from a common devices abstraction set (Temperature, Analog converter, GPIO Expander...) providing a consistent and unique set of function. Low level access to Serial, I2C and SPI is provided by lightweights classes available in the WebIOPi core without dependencies. Configuration is provided with the [http://webiopi.googlecode.com/svn/trunk/python/config /etc/webiopi/config] file. Devices and bus drivers can also be directly used in your Python script.
 
 ==Bus Interfaces==
 http://files.trouch.com/icon/python.png _Python library_
