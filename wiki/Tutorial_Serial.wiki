@@ -272,7 +272,7 @@ If you followed macro tutorial and device tutorial, you should easily understand
     <script type="text/javascript">
         webiopi().ready(init);
 	
-	// defines function passed later to webiopi().ready()
+	// defines function passed previously to webiopi().ready()
 	function init() {
 		// automatically refresh UI each seconds
 		setInterval(updateUI, 1000);
