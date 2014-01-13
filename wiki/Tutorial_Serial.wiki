@@ -140,16 +140,18 @@ Just like with the other devices set in the config file, you need to use *webiop
 {{{
 def loop():
     serial = webiopi.deviceInstance("serial") # retrieve device named "serial" in the config
-    serial.writeByte(0xFF) # write a single byte
-    serial.writeBytes([0x01, 0x02, 0xFF]) # write a byte array
-    serial.writeString("some text") # write a string
+    serial.writeByte(0xFF)                    # write a single byte
+    serial.writeBytes([0x01, 0x02, 0xFF])     # write a byte array
+    serial.writeString("some text")           # write a string
 
     if (serial.available() > 0):
-        value = serial.readByte() # read and return a single byte
+        value = serial.readByte()             # read and return a single byte
         print("0x%X" % value)
-        values = serial.readBytes(3) # read 3 bytes and return an array
+
+        values = serial.readBytes(3)          # read 3 bytes and return an array
         print(", ".join("0x%X" % i for i in values))
-        data = serial.readString() # read available data as string
+
+        data = serial.readString()            # read available data as string
         print(data)
 
     webiopi.sleep(1)
@@ -169,16 +171,18 @@ from webiopi.devices.serial import Serial
 serial = Serial("ttyAMA0", 9600)
 
 def loop():
-    serial.writeByte(0xFF) # write a single byte
+    serial.writeByte(0xFF)                # write a single byte
     serial.writeBytes([0x01, 0x02, 0xFF]) # write a byte array
-    serial.writeString("some text") # write a string
+    serial.writeString("some text")       # write a string
 
     if (serial.available() > 0):
-        value = serial.readByte() # read and return a single byte
+        value = serial.readByte()         # read and return a single byte
         print("0x%X" % value)
-        values = serial.readBytes(3) # read 3 bytes and return an array
+
+        values = serial.readBytes(3)      # read 3 bytes and return an array
         print(", ".join("0x%X" % i for i in values))
-        data = serial.readString() # read available data as string
+
+        data = serial.readString()        # read available data as string
         print(data)
 
     webiopi.sleep(1)
@@ -241,18 +245,18 @@ def setup():
 
 def loop():
     if (serial.available() > 0):
-        data = serial.readString() # read available data
-        lines = data.split("\r\n")  # split lines
-        count = len(lines)          # count lines
+        data = serial.readString()     # read available data
+        lines = data.split("\r\n")     # split lines
+        count = len(lines)             # count lines
 
-        lines = lines[0:count-1]    # remove last item from split which is empty
+        lines = lines[0:count-1]       # remove last item from split which is empty
 
         # process each complete line
         for pair in lines:
-            cv = pair.split("=")    # split channel/value
+            cv = pair.split("=")       # split channel/value
             channel = int(cv[0])
             value = int(cv[1])
-            sensors[channel] = value      # store value
+            sensors[channel] = value   # store value
 
     webiopi.sleep(1)
 
@@ -338,14 +342,18 @@ void loop() {
   if (Serial.available() > 0) {
     input = Serial.read();
     switch (input) {
+      
+      // "t" command: returns time in millis since reset/powerup
       case 't':
         Serial.println(millis());
         break;
 
+      // "a" command: read and returns analog channel 0
       case 'a':
         Serial.println(analogRead(0));
         break;
 
+      // "d" command: read and returns digital channel 2
       case 'd':
         Serial.println(digitalRead(2));
         break;
