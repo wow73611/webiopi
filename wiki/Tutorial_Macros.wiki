@@ -44,8 +44,8 @@ First, add inputs controls and labels in the `<body>` part.
 <div align="center">
 Turn On at :<input type="text" id="inputOn" /><br/>
 Turn Off at: <input type="text" id="inputOff" /><br/>
-</div>
 <div id="controls"></div>
+</div>
 </body>
 </html>
 }}}
