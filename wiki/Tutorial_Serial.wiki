@@ -324,7 +324,7 @@ You can then start WebIOPi and open your browser.
 
 <p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorial-ardu-sensors.png</p>
 
-=Arduino Request-Response example=
+=Arduino Commands example=
 We will reuse the same wiring as before, with a potentiometer (or anything else) plugged in the Analog Input 0. We will also read Digital Input 2, so you may need either a button or a single wire to change input value.
 
 ==Arduino Sketch==
