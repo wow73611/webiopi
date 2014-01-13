@@ -113,8 +113,8 @@ Configuring WebIOPi for Serial access is very easy once you know the tty name. E
 {{{
 [DEVICES]
 serial = Serial device:ttyAMA0 baudrate:9600
-uno = Serial device:ttyACM0 baudrate:9600
-ftdi = Serial device:ttyUSB0 baudrate:9600
+uno    = Serial device:ttyACM0 baudrate:9600
+ftdi   = Serial device:ttyUSB0 baudrate:9600
 }}}
 The most important is to match the device name with the tty name you found earlier. You can then use any name you want before the equal (=) symbol. You can also change the baudrate to match your device baudrate.
 
@@ -375,7 +375,7 @@ uno = Serial device:ttyACM0 baudrate:9600
 You an eventually try the 3-commands protocol using the Serial monitor.
 
 ==Javascript : Displaying values==
-Now create a new index.html, and add basic HTML structure, with webiopi.js loading, a place to put our Javascript code, and few CSS rules. Will use 3 `<div>` to display results.
+Now create a new index.html, and add basic HTML structure, with webiopi.js loading, a place for the Javascript code, and few CSS rules. We will use 3 `<div>` to display results.
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
