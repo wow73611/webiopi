@@ -184,6 +184,7 @@ You will need an Arduino with something to monitor thought the analog input. It 
 
 <p align="center">http://trouch.com/wp-content/uploads/2014/01/arduino-analog.png</p>
 
+===Arduino Sketch===
 Upload following sketch on your Arduino board using your computer.
 {{{
 int analogValue = 0;
