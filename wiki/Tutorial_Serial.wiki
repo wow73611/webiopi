@@ -216,7 +216,8 @@ You can then connect your Arduino to the Pi with the USB cord, set the appropria
 <p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorial-ardu-monitor.png</p>
 
 ===Python : Processing data===
-Instead of using Javascript Serial library, I prefer consume Arduino data directly on the server side, within a custom script, and provide a macro to ease UI interfacing.
+Instead of using Javascript Serial library, I prefer consume Arduino data directly on the server side, within a custom script, and provide a macro to ease UI interfacing. *Disable Serial REST mapping by commenting or removing Serial setup from /etc/webiopi/config*
+
 {{{
 import webiopi
 
