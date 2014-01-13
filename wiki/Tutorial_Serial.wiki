@@ -1,4 +1,4 @@
-<font size="5" color="red">*draft*</font> <font size="5">*Tutorial : Using Serial devices*</font>
+<font size="5">*Tutorial : Using Serial devices*</font>
 
 <wiki:toc max_depth="3" />
 
