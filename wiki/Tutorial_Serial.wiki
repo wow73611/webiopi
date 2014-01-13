@@ -1,4 +1,6 @@
 =<font color="red">draft</font>=
+<wiki:toc max_depth="3" />
+
 =Tutorial : Using Serial devices=
 PySerial is very good multi-platform Serial library but offers many useless features when making communication between a Pi and electronic components like Arduino.
 
@@ -128,12 +130,7 @@ http://trouch.com/wp-content/uploads/2014/01/serialloopback.jpg
 
 <wiki:video url="http://www.youtube.com/watch?v=R1nkrfgNSLw"/>
 
-==Javascript example==
-{{{
-TODO
-}}}
-
-==Python example with REST mapping==
+==Python Serial basis with REST mapping==
 Just like with the other devices set in the config file, you need to use *webiopi.deviceInstance* to retrieve configured Serial device :
 {{{
 def loop():
@@ -157,7 +154,7 @@ Be careful when using the REST API (with the Serial monitor) as well as using it
 
 If you need server computing, it's better to not set the Serial device in /etc/webiopi/config and create it by yourself in your script.
 
-==Python example without REST mapping==
+==Python Serial basis without REST mapping==
 There is no much difference from the previous example, you just need to import Serial from the correct module, then you can instantiate a Serial object, passing the tty name and baudrate.
 
 {{{
@@ -182,9 +179,10 @@ def loop():
     webiopi.sleep(1)
 }}}
 
-==Arduino example==
-You will need an Arduino with something to monitor thought the analog input. It can be a thermistor, a photo-resistor, or anything you own. I'll take a simple potentiometer so I can change analog value by hand.
-http://trouch.com/wp-content/uploads/2014/01/arduino-analog.png
+==Arduino Streaming example==
+You will need an Arduino with something to monitor thought the analog input. It can be a thermistor, a photo-resistor, or anything you own. I'll take a simple potentiometer so I can change analog value by hand. The Arduino will read analog inputs and write values to Serial each seconds. This is typically the example where trying to process data in Javascript has non sense.
+
+<p align="center">http://trouch.com/wp-content/uploads/2014/01/arduino-analog.png</p>
 
 Upload following sketch on your Arduino board using your computer.
 {{{
@@ -217,7 +215,7 @@ You can then connect your Arduino to the Pi with the USB cord, set the appropria
 
 <p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorial-ardu-monitor.png</p>
 
-===Python example===
+===Python : Processing data===
 Instead of using Javascript Serial library, I prefer consume Arduino data directly on the server side, within a custom script, and provide a macro to ease UI interfacing.
 {{{
 import webiopi
@@ -260,8 +258,8 @@ def getSensor(channel):
 
 }}}
 
-===Javascript Example===
-If you followed macro tutorial and device tutorial, you should easily understand following *index.html*
+===Javascript : Displaying values===
+If you followed macro and device tutorials, you should easily understand following *index.html*
 {{{
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -307,3 +305,15 @@ If you followed macro tutorial and device tutorial, you should easily understand
 }}}
 
 <p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-tutorial-ardu-sensors.png</p>
+
+==Arduino Request-Response example==
+
+===Arduino Sketch===
+{{{
+TODO
+}}}
+
+===Javascript interaction===
+{{{
+TODO
+}}}
