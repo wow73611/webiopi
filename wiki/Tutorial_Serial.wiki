@@ -4,9 +4,9 @@
 
 =Introduction=
 
-PySerial is very good multi-platform Serial library but offers many useless features when making communication between a Pi and electronic components like Arduino.
+PySerial is very good multi-platform Serial library but offers useless features for basic communication between a Pi and electronic components like Arduino.
 
-WebIOPi allows to use Serial devices natively without PySerial. It uses a lightweight driver instead, dedicated to electronic interfacing, and shares a common abstraction with I2C and SPI drivers. So you will found the same write & read functions on all three interfaces.
+WebIOPi allows to use Serial devices natively without PySerial. It uses a lightweight library instead, dedicated to electronic interfacing, and shares a common abstraction with I2C and SPI drivers. So you will found the same write & read functions on all three interfaces.
 
 Serial driver also allows a RAW access directly with the REST API and so with the Javascript client library. This is only intended to be used with full-text Serial protocols, not for low-level and binary interfacing, for which macros still remains the best option.
 
