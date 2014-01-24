@@ -20,7 +20,8 @@ If you prefer PySerial, you can use it inside WebIOPi macros, but you will not b
 
 =Prerequisites=
 ==Use Chrome browser==
-WebIOPi Serial library has been written for [https://chrome.google.com Chrome], and may not work on other browser. Midori and Firefox are known to not support WebIOPi Serial library.
+<font color="red">*WebIOPi Serial library has been written for [https://chrome.google.com Chrome]*</font>, and may not work on other browser. Midori and Firefox are known to not support WebIOPi Serial library.
+
 ==WebIOPi SVN update==
 <font color="red">*You will need to use the latest trunk from the SVN repository.*</font> There is a bug in the 0.6 release avoiding low-level binary interfacing. It has been fixed by r1368.
 {{{
