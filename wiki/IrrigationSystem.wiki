@@ -9,7 +9,7 @@
 ==Installation==
   * If not already done, install WebIOPi
     * See https://code.google.com/p/webiopi/wiki/INSTALL
-  * Download Irrigation package at
+  * Download Irrigation package at https://code.google.com/p/webiopi/downloads/
   * Create a folder somewhere on your Pi eg. /home/pi/irrigation
   * Copy files from irrigation archive in the previously created folder
     * /home/pi/irrigation
@@ -42,7 +42,7 @@
 
 
 ==Usage==
-<p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-irrigation.png</p>
+http://trouch.com/wp-content/uploads/2014/01/webiopi-irrigation.png
 
 ===Mode : auto/manual===
   * auto : activate master channel and each stations in sequence at a given time and days
