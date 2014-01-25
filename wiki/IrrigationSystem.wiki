@@ -46,7 +46,7 @@ http://trouch.com/wp-content/uploads/2014/01/webiopi-irrigation.png
 
 ===Mode : auto/manual===
   * auto : activate master channel and each stations in sequence at a given time and days
-  * manual : channels are mannually activated
+  * manual : channels are manually activated
   
 ===Master : ON/OFF===
   * Shows the state of master/main valve
@@ -67,4 +67,8 @@ http://trouch.com/wp-content/uploads/2014/01/webiopi-irrigation.png
 
 ===Channels sliders===
   * Setup opening duration of each valve
+
+==Customization==
+Edit index.html and style.css to customize the UI. You may also need to edit script.js in order to change button texts. You can see the customization made by Benjamin, a WebIOPi fan and donator.
+http://trouch.com/wp-content/uploads/2014/01/webiopi-irrigation-ben.jpg
   
