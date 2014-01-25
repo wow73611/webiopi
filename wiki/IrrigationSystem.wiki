@@ -17,7 +17,6 @@
 
   * Copy files from irrigation archive in the previously created folder
     * /home/pi/irrigation
-      * README.txt : Current README
       * script.py  : WebIOPi Python script
       * index.html : HTML file containing UI structure
       * script.js  : Javascript code, loaded and used by index.html
