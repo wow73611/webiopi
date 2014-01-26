@@ -4,8 +4,6 @@ Making an IoT application using WebIOPi is very easy once we catch how it works 
 
 WebIOPi includes an HTTP server that provides both HTML resources and a REST API to control things. Your browser will first load a HTML file, then the included Javascript will make Asynchronous calls to the REST API to control and update the UI. This method is very efficient, because it don't need to refresh and download the whole page.
 
-<p align="center">http://trouch.com/wp-content/uploads/2012/11/webiopi-architecture.png</p>
-
 <p align="center">http://trouch.com/wp-content/uploads/2014/01/webiopi-rest-basis.png</p>
 
   * You can build your HTML / Web UI from scratch, using the WebIOPi JS library or not.
