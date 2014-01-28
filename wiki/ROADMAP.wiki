@@ -1,9 +1,13 @@
 This roadmap gives information about upcoming work.
 
+==High Priority==
   * DS2482 1-Wire support
   * RPIDOM board support
   * PiFace board support
   * Arduino board support
+  * [https://code.google.com/p/webiopi/issues/list?can=2&q=label%3APriority-High High Priority] bug fixes
+
+==Medium Priority==
   * Task scheduling (issue 19)
   * GPIO interrupt handling (issue 8)
   * WebSocket support (issue 9)
