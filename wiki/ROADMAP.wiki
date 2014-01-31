@@ -5,10 +5,10 @@ This roadmap gives information about upcoming work.
   * DS2482 1-Wire support
   * RPIDOM board support
   * PiFace board support
-  * Gert board ADC and DAC
-  * Firmata support
+  * Gert board ADC and DAC support
 
 ==Medium Priority==
+  * Firmata support
   * Task scheduling (issue 19)
   * GPIO interrupt handling (issue 8)
   * WebSocket support (issue 9)
