@@ -94,7 +94,7 @@ http://files.trouch.com/icon/javascript.png _Javascript library_
 I cannot write a driver for all components, mainly because I don't have them, and I cannot buy everything. I could write drivers simply reading specs, but I will not be able to certify it work.
 
 ===Submit your devices===
-Feel free to submit any component you use and/or would like to use with WebIOPi on the [https://groups.google.com/d/topic/webiopi/p1lfi0pIBFA/discussion discussion thread]. Depending on demands, I may write the driver if I can have a sample.
+Feel free to submit any component you use and/or would like to use with WebIOPi on the [https://code.google.com/p/webiopi/issues/list bug tracker]. Depending on demands, I may write the driver if I can have a sample.
 
 ===How to help===
 If you know how the device work on it's low level interface, look on the [http://code.google.com/p/webiopi/source/checkout source repository], starting with [http://webiopi.googlecode.com/svn/trunk/python/webiopi/devices/digital/pcf8574.py PCF8574], write your own and submit it.
