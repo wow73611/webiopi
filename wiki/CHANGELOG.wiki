@@ -8,7 +8,7 @@
   * added MCP4802, MCP4812, MCP4822 ADC drivers
   * added HYT221 Humidity Sensor driver
   * added BMP180 Temperature & Pressure Sensor driver
-  * added support of multiple MCP23Sxx on a single CE
+  * added support of multiple MCP23Sxx on a single SPI CE line
   * added vref argument for MCP DAC and ADC (issue #48)
   * fixed devices monitor DAC display
 
