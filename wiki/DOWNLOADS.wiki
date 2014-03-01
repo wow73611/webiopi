@@ -13,4 +13,4 @@
 
 <br/>
 
-<p align="center"><font size=4>*Download files are now provided on [http://sourceforge.net/projects/webiopi/files/?source=navbar SourceForge]*</font></p>
+<p align="center"><font size=4>*Download files are available on [http://sourceforge.net/projects/webiopi/files/?source=navbar SourceForge]*</font></p>
