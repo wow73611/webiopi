@@ -1,0 +1,12 @@
+*WebIOPi is developed on Free-Time, and provided for Free !*
+
+If you like this project, please consider donating to support it and help me improve it.
+
+15US$ (10€) and more donators are rewarded with extra package !*
+
+<p align="center">*[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7MAALMDECAJ8A Donate in US$]* or *[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=79EM7ZV9FQ4HU Donate in €]*</p>
+<p align="center">http://trouch.com/wp-content/uploads/2013/12/PayPal-e1386755933339.png</p>
+
+<p></p>
+
+<p align="center">*Download files are now provided on [http://sourceforge.net/projects/webiopi/files/?source=navbar SourceForge].*</p>
