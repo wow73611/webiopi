@@ -11,13 +11,13 @@
   * Documentation
     * [CONFIGURATION Configuration]
     * [PYTHONSERVER Python Server library]
-    * [JAVASCRIPT Javascript library]
-    * [CSS CSS naming]
-    * [RESTAPI GPIO / REST API]
     * [DEVICES Supported Devices]
     * Device library
       * [DIGITAL GPIO Expanders]
       * [ANALOG Analog Converters]
       * [SENSOR Sensors]
+    * [JAVASCRIPT Javascript library]
+    * [CSS CSS naming]
+    * [RESTAPI GPIO / REST API]
   * [CHANGELOG Changelog]
   * [ROADMAP Roadmap]
