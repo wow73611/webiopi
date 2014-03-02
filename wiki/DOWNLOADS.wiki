@@ -12,4 +12,4 @@
 
 <br/>
 
-<p align="center"><font size=4 color="blue">* ➥ Downloads are available on [http://sourceforge.net/projects/webiopi/files/ SourceForge] *</font></p>
+<p align="center"><font size=4 color="blue">* ➥ Downloads are available for Free on [http://sourceforge.net/projects/webiopi/files/ SourceForge] *</font></p>
