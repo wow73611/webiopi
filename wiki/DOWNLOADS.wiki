@@ -1,9 +1,8 @@
-<p align="center"><font size=3>*WebIOPi is developed on _Free-Time_, and provided for _Free_ !*</font></p>
+<p align="center"><font size=3 color="blue">*WebIOPi is developed on _Free-Time_, and provided for _Free_ !*</font></p>
 
 <p align="center">_If you like this project, please consider donating to support it and help me improve it._</p>
 
 <p align="center">_15US$ (10€) and more donators are rewarded with extra package !_</p>
-<p align="center">_75US$ (50€) and more donators are rewarded with personal support !_</p>
 <br/>
 
 <p align="center">*[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7MAALMDECAJ8A Donate in US$]* or *[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=79EM7ZV9FQ4HU Donate in €]*</p>
@@ -13,4 +12,4 @@
 
 <br/>
 
-<p align="center"><font size=4>* ==> Downloads are available on [http://sourceforge.net/projects/webiopi/files/ SourceForge] <== *</font></p>
+<p align="center"><font size=4 color="red">* ➥ Downloads are available on [http://sourceforge.net/projects/webiopi/files/ SourceForge] *</font></p>
