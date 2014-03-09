@@ -1,1 +1,5 @@
 <p align="center"><font size=4 color="blue">* ➥ Downloads are available on [http://sourceforge.net/projects/webiopi/files/ SourceForge] *</font></p>
+
+<p align="center">*[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7MAALMDECAJ8A Donate in US$]* or *[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=79EM7ZV9FQ4HU Donate in €]*</p>
+<p align="center">http://trouch.com/wp-content/uploads/2013/12/PayPal-e1386755933339.png</p>
+<p align="center"><font size="1">_(No account required)_</font></p>
