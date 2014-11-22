@@ -1,9 +1,11 @@
 <p align="center"><font size=4 color="blue">*[http://www.iomotix.com Discover iomotix.com - next WebIOPi evolution]*</font></p>
 
-<p></p>
+<br/><br/>
 
 <p align="center"><font size=4 color="blue">* ➥ WebIOPi downloads are available on [http://sourceforge.net/projects/webiopi/files/ SourceForge] *</font></p>
+
 <br/><br/>
+
 <p align="center">*[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7MAALMDECAJ8A Donate in US$]* or *[https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=79EM7ZV9FQ4HU Donate in €]*</p>
 <p align="center">http://trouch.com/wp-content/uploads/2013/12/PayPal-e1386755933339.png</p>
 <p align="center"><font size="1">_(No account required)_</font></p>
