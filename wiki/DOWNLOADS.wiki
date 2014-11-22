@@ -1,4 +1,4 @@
-<font size=5 color="blue">*[http://www.iomotix.com Discover iomotix.com - next WebIOPi evolution]*</font>
+<p align="center"><font size=4 color="blue">*[http://www.iomotix.com Discover iomotix.com - next WebIOPi evolution]*</font></p>
 
 
 <p align="center"><font size=4 color="blue">* ➥ WebIOPi downloads are available on [http://sourceforge.net/projects/webiopi/files/ SourceForge] *</font></p>
