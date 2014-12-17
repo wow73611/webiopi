@@ -68,7 +68,7 @@ By choosing the GPIO Header link on the main page, you will be able to control G
 http://trouch.com/wp-content/uploads/2012/08/webiopi-chrome.png
 
 =Access WebIOPi over Internet=
-Thanks to Weaved IoT Kit, it's easy to access your Raspberry from anywhere in an easy and secure fashion.
+Thanks to Weaved IoT Kit, it's easy to access your Raspberry from anywhere in a secure fashion.
 
 ==Register on the Weaved developper portal==
 Go to https://developer.weaved.com/portal/ and follow instruction to create an account.
