@@ -111,6 +111,8 @@ To test the connection to your Raspberry Pi from your browser, go to the [https:
 
 https://developer.weaved.com/portal/images/Device-list.png
 
+<p align="center">
 <wiki:video url="http://www.youtube.com/watch?v=q7doiTx1ryM" width="560"/>
 
 <wiki:video url="http://www.youtube.com/watch?v=Uhm9d_hrsxg" width="560"/>
+</p>
