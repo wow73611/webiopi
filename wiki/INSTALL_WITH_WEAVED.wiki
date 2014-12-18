@@ -107,7 +107,7 @@ Support of multiple services is not fully tested in 1.2.5. We recommend that you
 
 == Test your setup ==
 
-To test the connection to your Raspberry Pi from your browser, go to the [https://developer.weaved.com/portal/members/betahome.php device list], find the line with your Raspberry Pi's alias, and click on “Connect”. Your device's internet address will be shown in the area blurred below.
+To test the connection to your Raspberry Pi from your browser, go to the [[https://developer.weaved.com/portal/members/betahome.php] device list], find the line with your Raspberry Pi's alias, and click on “Connect”. Your device's internet address will be shown in the area blurred below.
 
 https://developer.weaved.com/portal/images/Device-list.png
 
