@@ -1,6 +1,5 @@
   * Tutorials
     * [INSTALL Installation]
-    * [INTERNET Internet Access]
     * [PASSWORD Change Password]
     * [Tutorial_Basis Framework Basis]
     * [Tutorial_Macros Using Macros]
