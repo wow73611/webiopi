@@ -1,3 +1,6 @@
+==0.7.1 (02/10/15)==
+  * Added Weaved IoT Kit
+
 ==0.7 (03/01/14) ==
   * improved touch device handling (issue #73)
   * updated jQuery library to version 1.11
